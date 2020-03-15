@@ -15,7 +15,7 @@ std::map<int, std::string> playerNames = {
 	{2, "Player2"}
 };
 
-int checkwin();
+int checkForWinner();
 void renderBoard();
 
 int main()
@@ -52,13 +52,13 @@ int main()
 			square[9] = mark;
 		else
 		{
-			std::cout << "Invalid move ";
+			std::cout << "Invalid move";
 			player--; //return to previous player in order for current player to try again from ++ below
 			std::cin.ignore();
 			std::cin.get();
 		}
 
-		i = checkwin();
+		i = checkForWinner();
 		player++;
 		
 	} while (i == -1);
@@ -68,7 +68,7 @@ int main()
 	if (i == 1)
 		std::cout << "==>\t" << playerNames[--player] << " wins ";
 	else
-		std::cout << "==>\aGame draw";
+		std::cout << "==>\tGame draw";
 
 	std::cin.ignore();
 	std::cin.get();
@@ -83,7 +83,7 @@ int main()
 	O GAME IS OVER AND NO RESULT
 **********************************************/
 
-int checkwin()
+int checkForWinner()
 {
 	if (square[1] == square[2] && square[2] == square[3]) {
 		square[1] = 'W';

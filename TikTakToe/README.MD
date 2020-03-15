@@ -1,0 +1,7 @@
+# TickTackToe
+
+A SIMPLE TICKTAKTOE GAME FOR EDUCATIONAL PURPOSES
+I DOUBT THIS FOLLOWS ANYTHING REMOTELY CLOSE TO BEST PRACTISES, BUT IT WORKS.
+
+## Build
+build with Visual Studio as this is a command line game
